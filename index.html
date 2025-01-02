@@ -220,7 +220,14 @@
             var vm = this;
             var time = vm.roll();
             var box = document.getElementById("box");
-
+            var finalPosition = vm.angle_i + 18 + time; 
+            var targetIndex = finalPosition % vm.list.length;
+            if(targetIndex != 0) {
+              targetIndex = vm.list.length - targetIndex;
+            }
+            if(targetIndex === vm.list.length - 28||targetIndex === vm.list.length - 24||targetIndex === vm.list.length - 20||targetIndex === vm.list.length - 6||targetIndex === vm.list.length - 3) {
+              time += 1;
+            }
             vm.isDisabled = true;
             vm.isFreedisabled = true;
             // 加速
@@ -275,6 +282,7 @@
                   var x = 0;
                   if(vm.angle_i!=0)
                     x = vm.list.length-vm.angle_i
+                  
                   vm.results = vm.list[x];
                   vm.isDisabled = false;
                   vm.isFreedisabled = false;
