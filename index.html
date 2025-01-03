@@ -75,6 +75,61 @@
             recent_volume_old: 10,
 
             list: '',
+            // list: [
+            //    '王霖铭',
+            // 	 '周于卓',
+            // 	 '赵颖',
+            // 	 '龙贞贞',
+            // 	 '王晶',
+            // 	 '张圆圆',
+            // 	 '邓喻文',
+            // 	 '李志敏',
+            // 	 '凡敏',
+            // 	 '陈志琳',
+            // 	 '李笛',
+            // 	 '郭蕊',
+            // 	 '毕娜',
+            // 	 '姚羽婷',
+            // 	 '李可心',
+            // 	 '李亚贤',
+            // 	 '郭俊莹',
+            // 	 '李浩东',
+            // 	 '李江玥',
+            // 	 '李凤媛',
+            // 	 '王思齐',
+            // 	 '卢嘉欣',
+            // 	 '杨惟勤',
+            // 	 '潘豪',
+            // 	 '盛诗蕴',
+            // 	 '刘承铭',
+            // 	 '杨凌',
+            // 	 '闻雪珈',
+            // 	 '赵思棋',
+            // 	 '吕磊',
+            // 	 '马鑫',
+            // 	 '付继鹏',
+            // 	 '丁子珊',
+            // 	 '李粒',
+            // 	 '毕鑫龙',
+            // 	 '庄杰蓉',
+            // 	 '许航维',
+            // 	 '马凯贤',
+            // 	 '崔航睿',
+            // 	 '鄢建杰',
+            // 	 '张朝宇',
+            // 	 '陈振林',
+            // 	 '李欣琪',
+            // 	 '杨松任',
+            // 	 '张俊钰',
+            // 	 '刘一骁',
+            // 	 '叶振霖',
+            // 	 '杨金剑',
+            // 	 '杨天叶',
+            // 	 '储自勇',
+            // 	 '肖杨',
+            // 	 '杨亚龙',
+            // 	 '陈震昊'
+            //   ],
 
             angle: 0, //基础角度
             angle_i: 0, //角度数变量
@@ -220,14 +275,7 @@
             var vm = this;
             var time = vm.roll();
             var box = document.getElementById("box");
-            var finalPosition = vm.angle_i + 18 + time; 
-            var targetIndex = finalPosition % vm.list.length;
-            if(targetIndex != 0) {
-              targetIndex = vm.list.length - targetIndex;
-            }
-            if(targetIndex === vm.list.length - 28||targetIndex === vm.list.length - 24||targetIndex === vm.list.length - 20||targetIndex === vm.list.length - 6||targetIndex === vm.list.length - 3) {
-              time += 1;
-            }
+
             vm.isDisabled = true;
             vm.isFreedisabled = true;
             // 加速
@@ -282,7 +330,6 @@
                   var x = 0;
                   if(vm.angle_i!=0)
                     x = vm.list.length-vm.angle_i
-                  
                   vm.results = vm.list[x];
                   vm.isDisabled = false;
                   vm.isFreedisabled = false;
